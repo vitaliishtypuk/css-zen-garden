@@ -1,0 +1,73 @@
+body {
+    background-color: grey;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.page-wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-column: 60% 40%; 
+    grid-template-row: 20% 15% 45% 10% 10%;
+    
+}
+
+.intro {
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+header {
+    background-color: white;
+}
+
+.summary {
+    background-color: #505050;
+}
+
+.preamble {
+    background-color: #444444;
+}
+
+div .main {
+    background-color: green;
+}
+
+.explanation {
+    background-color: white;
+}
+
+.participation {
+    background-color: #505050;
+}
+
+.benefits {
+    background-color: #606060;
+}
+
+.requirements {
+    background-color: #707070;
+}
+
+div footer {
+    background-color: #808080;
+}
+
+div .wrapper {
+    background-color: blue;
+}
+
+.design-selection {
+    background-color: white;
+}
+
+.design-archives {
+    background-color: #505050;
+}
+
+.zen-resources {
+    background-color: #606060;
+}
