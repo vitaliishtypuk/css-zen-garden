@@ -1,93 +1,185 @@
 body {
-    background-color: grey;
     max-width: 700px;
     margin: 0 auto;
+    background: #060606 url("img/background.jpg") no-repeat center top;
+    background-size: 750px 7000px;
+     
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant SC', serif, cursive;
+    text-align: left;
+    background-color: 0;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(122, 4, 10);
+}
+
+
+
+h4,
+h5,
+h6,
+h7,
+p,
+li {
+    font-family: 'Cormorant SC', serif, cursive;
+    text-align: left;
+    background-color: 0;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    font-family: 'Cormorant SC', serif, cursive;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.26);
+    text-decoration: none;
+    list-style: none;
+    color: rgb(122, 4, 10);
+    border-bottom:5px solid #000000;
+}
+
+a,
+abbr {
+    font-family: 'Cormorant SC', serif, cursive;
+    text-align: left;
+    background-color: 0;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(122, 4, 10);
 }
 
 .page-wrapper {
+    border: 0 20px 0 20px;
     display: grid;
-    grid-gap: 10px;
-    grid-template-column: 60% 40%; 
-    grid-template-row: 20% 15% 45% 10% 10%;
-    
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 0;
+    grid-template-areas: 
+    "intro intro"
+    "main main"
+    "sidebar sidebar"
+
 }
 
 .intro {
-    background-color: red;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    background: 0;
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto auto;
+    grid-gap: 0;
+    grid-template-areas: 
+    "header summary"
+    "preamble preamble"
+    
 }
 
 header {
-    background-color: white;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
+
+    grid-area: header;
+    font-size:20px;
+    border-left:5px solid #000000;
+    
 }
 
 .summary {
-    background-color: #505050;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-area: summary;
 }
 
 .preamble {
-    background-color: #444444;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    background: rgba(255, 255, 255, 0.459);
+    grid-area: preamble;
 }
 
-div .main {
-    background-color: green;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.explanation {
-    background-color: white;
-}
-
-.participation {
-    background-color: #505050;
-}
-
-.benefits {
-    background-color: #606060;
+.main {
+    grid-area: main;
 }
 
 .requirements {
-    background-color: #707070;
+    background-color: rgba(255, 255, 255, 0.26);
 }
 
-div footer {
-    background-color: #808080;
+.sidebar {
+    background: 0;
+    grid-area: sidebar;
 }
 
-div .wrapper {
-    background-color: blue;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 6;
+.sidebar .wrapper {
+    background: rgba(255, 255, 255, 0.459);
+    text-align: left;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto auto;
+    grid-gap: 0;
+    grid-template-areas: 
+    "design-selection design-archives"
+    "design-selection zen-resources"
+
 }
 
 .design-selection {
-    background-color: white;
+    text-align: left;
+    background: 0;
+    grid-area: design-selection;
 }
 
 .design-archives {
-    background-color: #505050;
+    text-align: left;
+    background: 0;
+    grid-area: design-archives;
 }
 
 .zen-resources {
-    background-color: #606060;
+    text-align: left;
+    background: 0;
+    grid-area: zen-resources;
+}
+
+@media (max-width: 540px) {
+
+    .page-wrapper {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 0;
+        grid-template-areas: 
+        "intro"
+        "main"
+        "sidebar"
+    
+    }
+
+    .intro {
+        text-align: left;
+        background: 0;
+        grid-area: intro;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 0;
+        grid-template-areas: 
+        "header"
+        "summary"
+        "preamble"
+        
+    }
+
+    .sidebar .wrapper {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: ato auto auto;
+        grid-gap: 0;
+        grid-template-areas: 
+        "design-selection"
+        "design-archives"
+        "zen-resources"
+    }
+
 }
